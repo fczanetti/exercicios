@@ -19,4 +19,5 @@ def isomorphic(s1: str, s2: str):
     return True
 
 
-print(isomorphic(s, t))
+if __name__ == '__main__':
+    print(isomorphic(s, t))
