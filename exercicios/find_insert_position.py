@@ -3,7 +3,7 @@
 # You must write an algorithm with O(log n) runtime complexity.
 
 nums = [-2, 1, 2, 4, 5, 6, 7, 9, 11, 12, 15, 18, 27]
-target = 10
+target = 3
 
 
 def find_insert_position(n: list, t: int):
@@ -22,12 +22,12 @@ def find_insert_position(n: list, t: int):
                 if target <= n[mid + 1]:
                     return f'Índice: {mid + 1}'
                 left = mid
-                mid = (right - left) // 2 + left
+                mid = (right + left) // 2
             elif target < n[mid]:
                 if target >= n[mid - 1]:
                     return f'Índice: {mid}'
                 right = mid
-                mid = (right - left) // 2 + left
+                mid = (right + left) // 2
 
 
 if __name__ == '__main__':
